@@ -1,0 +1,217 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="sr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Builderly — Build apps visually</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="brand" href="#">Builderly</a>
+
+        <nav class="nav" id="main-nav">
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#docs">Docs</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="actions">
+            <button class="btn ghost" id="login-btn">Log in</button>
+            <button class="btn primary" id="signup-btn">Get started</button>
+            <button class="hamburger" id="hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container hero-inner">
+            <div class="hero-left">
+                <h1>Pravi aplikacije vizuelno — brzo i jednostavno</h1>
+                <p class="lead">Bez koda. Povuci i pusti komponente, poveži podatke, objavi aplikaciju u par klikova.</p>
+                <div class="hero-cta">
+                    <input class="email" type="email" placeholder="Unesi e-mail" />
+                    <button class="btn big primary" id="hero-get-started">Start free</button>
+                </div>
+                <div class="trust">
+                    <span>Used by teams at</span>
+                    <div class="logos">
+                        <div class="logo">Acme</div>
+                        <div class="logo">Nexus</div>
+                        <div class="logo">Orbit</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-right" aria-hidden="true">
+                <!-- fake mockup card -->
+                <div class="mockup">
+                    <div class="mockup-top">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                    </div>
+                    <div class="mockup-body">
+                        <div class="sidebar">
+                            <div class="menu-item active">Home</div>
+                            <div class="menu-item">Pages</div>
+                            <div class="menu-item">Database</div>
+                            <div class="menu-item">Plugins</div>
+                        </div>
+                        <div class="canvas">
+                            <div class="card small">Header</div>
+                            <div class="card large">Main Editor Area</div>
+                            <div class="card small">Preview</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Sve što ti treba za izgradnju aplikacije</h2>
+            <p class="section-sub">Bloće, baze podataka, autentikacija i hosting — sve na jednom mestu.</p>
+
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="icon">⚡</div>
+                    <h3>Drag & Drop</h3>
+                    <p>Intuitivan editor sa povlačenjem elemenata i instant preview.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="icon">🔗</div>
+                    <h3>Integracije</h3>
+                    <p>Poveži se sa API-jima i popularnim servisima brzo i bez komplikacija.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="icon">📦</div>
+                    <h3>Komponente</h3>
+                    <p>Biblioteka ponovljivih komponenti i predložaka za brži start.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="icon">🚀</div>
+                    <h3>Hosting & Deploy</h3>
+                    <p>Objavi aplikaciju sa jednim klikom i prati metrike u realnom vremenu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Cene</h2>
+            <p class="section-sub">Planovi za pojedince i timove.</p>
+
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <div class="price-title">Free</div>
+                    <div class="price-value">€0</div>
+                    <ul class="price-list">
+                        <li>Do 1 projekat</li>
+                        <li>Osnovne komponente</li>
+                        <li>Publikovanje</li>
+                    </ul>
+                    <button class="btn ghost">Start free</button>
+                </div>
+
+                <div class="price-card recommended">
+                    <div class="ribbon">Popular</div>
+                    <div class="price-title">Pro</div>
+                    <div class="price-value">€15 / mo</div>
+                    <ul class="price-list">
+                        <li>Neograničeni projekti</li>
+                        <li>Napredne komponente</li>
+                        <li>Team members</li>
+                    </ul>
+                    <button class="btn primary">Get Pro</button>
+                </div>
+
+                <div class="price-card">
+                    <div class="price-title">Enterprise</div>
+                    <div class="price-value">Custom</div>
+                    <ul class="price-list">
+                        <li>Dedicated support</li>
+                        <li>Custom integrations</li>
+                        <li>SLA</li>
+                    </ul>
+                    <button class="btn ghost">Contact sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="docs" class="docs">
+        <div class="container">
+            <h2 class="section-title">Docs & Resources</h2>
+            <div class="doc-grid">
+                <article class="doc-card">
+                    <h4>Getting started</h4>
+                    <p>Brz vodič kako napraviti prvu aplikaciju.</p>
+                </article>
+
+                <article class="doc-card">
+                    <h4>API reference</h4>
+                    <p>Dokumentacija za sve dostupne API pozive.</p>
+                </article>
+
+                <article class="doc-card">
+                    <h4>Community</h4>
+                    <p>Forum, tutorials i predlošci od zajednice.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="footer-cta">
+        <div class="container">
+            <h3>Spreman da počneš?</h3>
+            <p>Napravite svoj prvi projekt danas — besplatno.</p>
+            <button class="btn big primary">Start free</button>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <div class="col">
+            <a class="brand" href="#">Builderly</a>
+            <p>Tools to build apps visually.</p>
+        </div>
+
+        <div class="col">
+            <h5>Product</h5>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#docs">Docs</a>
+        </div>
+
+        <div class="col">
+            <h5>Company</h5>
+            <a href="#contact">Contact</a>
+            <a href="#">Careers</a>
+        </div>
+
+        <div class="col">
+            <h5>Follow</h5>
+            <div class="socials">Twitter · GitHub · Discord</div>
+        </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Builderly. All rights reserved.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
