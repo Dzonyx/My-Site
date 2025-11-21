@@ -1,217 +1,180 @@
-<!-- index.html -->
 <!doctype html>
-<html lang="sr">
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Builderly — Build apps visually</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NoCode Builder — Visual App Builder (Demo)</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header class="site-header">
-    <div class="container header-inner">
-        <a class="brand" href="#">Builderly</a>
-
-        <nav class="nav" id="main-nav">
-            <a href="#features">Features</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#docs">Docs</a>
-            <a href="#contact">Contact</a>
-        </nav>
-
-        <div class="actions">
-            <button class="btn ghost" id="login-btn">Log in</button>
-            <button class="btn primary" id="signup-btn">Get started</button>
-            <button class="hamburger" id="hamburger" aria-label="Open menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
+  <header class="header">
+    <div class="container header-row">
+      <a class="brand" href="#" id="go-home">NoCode Builder</a>
+      <nav class="nav">
+        <a href="#" id="nav-features">Features</a>
+        <a href="#" id="nav-pricing">Pricing</a>
+        <a href="#" id="nav-contact">Contact</a>
+        <a href="mailto:nocodebuilder@hotmail.com" id="nav-email">Contact: nocodebuilder@hotmail.com</a>
+      </nav>
+      <div class="actions">
+        <button class="btn ghost" id="btn-login">Log in</button>
+        <button class="btn primary" id="btn-signup">Sign up</button>
+      </div>
     </div>
-</header>
+  </header>
 
-<main>
-    <section class="hero">
-        <div class="container hero-inner">
-            <div class="hero-left">
-                <h1>Pravi aplikacije vizuelno — brzo i jednostavno</h1>
-                <p class="lead">Bez koda. Povuci i pusti komponente, poveži podatke, objavi aplikaciju u par klikova.</p>
-                <div class="hero-cta">
-                    <input class="email" type="email" placeholder="Unesi e-mail" />
-                    <button class="btn big primary" id="hero-get-started">Start free</button>
-                </div>
-                <div class="trust">
-                    <span>Used by teams at</span>
-                    <div class="logos">
-                        <div class="logo">Acme</div>
-                        <div class="logo">Nexus</div>
-                        <div class="logo">Orbit</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="hero-right" aria-hidden="true">
-                <!-- fake mockup card -->
-                <div class="mockup">
-                    <div class="mockup-top">
-                        <div class="dot red"></div>
-                        <div class="dot yellow"></div>
-                        <div class="dot green"></div>
-                    </div>
-                    <div class="mockup-body">
-                        <div class="sidebar">
-                            <div class="menu-item active">Home</div>
-                            <div class="menu-item">Pages</div>
-                            <div class="menu-item">Database</div>
-                            <div class="menu-item">Plugins</div>
-                        </div>
-                        <div class="canvas">
-                            <div class="card small">Header</div>
-                            <div class="card large">Main Editor Area</div>
-                            <div class="card small">Preview</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <main id="app">
+    <!-- Landing / Hero -->
+    <section class="hero" id="landing">
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <h1>Build mobile & web apps visually — no code</h1>
+          <p class="lead">Drag & drop builder, database, integrations and instant preview. Unlimited projects — free.</p>
+          <div class="hero-cta">
+            <button class="btn big primary" id="cta-start">Get started — it's free</button>
+            <button class="btn ghost" id="cta-explore">Explore public projects</button>
+          </div>
+          <div class="meta">Contact: <a href="mailto:nocodebuilder@hotmail.com">nocodebuilder@hotmail.com</a></div>
         </div>
+
+        <div class="hero-right">
+          <div class="mockup">
+            <div class="mockup-top"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
+            <div class="mockup-body">
+              <div class="sidebar">
+                <div class="menu-item active">Projects</div>
+                <div class="menu-item">Database</div>
+                <div class="menu-item">Plugins <span class="pill coming">Coming soon</span></div>
+                <div class="menu-item">Publish</div>
+              </div>
+              <div class="canvas">
+                <div class="card large">Visual Editor Preview</div>
+                <div class="card small">Preview: Phone / Tablet / Desktop</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="features" class="features">
-        <div class="container">
-            <h2 class="section-title">Sve što ti treba za izgradnju aplikacije</h2>
-            <p class="section-sub">Bloće, baze podataka, autentikacija i hosting — sve na jednom mestu.</p>
+    <!-- Dashboard / Editor (hidden by default) -->
+    <section id="dashboard" class="dashboard hidden">
+      <div class="container dashboard-row">
+        <aside class="sidebar-menu">
+          <div class="user-box">
+            <div id="user-email-display">Not signed in</div>
+            <div id="user-role-display" class="muted">visitor</div>
+          </div>
 
-            <div class="feature-grid">
-                <div class="feature">
-                    <div class="icon">⚡</div>
-                    <h3>Drag & Drop</h3>
-                    <p>Intuitivan editor sa povlačenjem elemenata i instant preview.</p>
-                </div>
+          <button class="btn full" id="new-project-btn">+ New Project</button>
+          <div class="projects-list" id="projects-list"></div>
 
-                <div class="feature">
-                    <div class="icon">🔗</div>
-                    <h3>Integracije</h3>
-                    <p>Poveži se sa API-jima i popularnim servisima brzo i bez komplikacija.</p>
-                </div>
+          <div class="admin-panel hidden" id="admin-panel">
+            <hr>
+            <h4>Admin</h4>
+            <button class="btn full ghost" id="admin-seed">Seed demo projects</button>
+            <button class="btn full ghost" id="admin-clear">Clear all data</button>
+          </div>
 
-                <div class="feature">
-                    <div class="icon">📦</div>
-                    <h3>Komponente</h3>
-                    <p>Biblioteka ponovljivih komponenti i predložaka za brži start.</p>
-                </div>
+          <button class="btn full ghost" id="btn-logout">Log out</button>
+        </aside>
 
-                <div class="feature">
-                    <div class="icon">🚀</div>
-                    <h3>Hosting & Deploy</h3>
-                    <p>Objavi aplikaciju sa jednim klikom i prati metrike u realnom vremenu.</p>
-                </div>
+        <main class="editor-area" id="editor-area">
+          <div class="editor-empty" id="editor-empty">
+            <h2>Welcome to your Dashboard</h2>
+            <p>Create a project or open an existing one. Published projects generate a public preview link anyone can open.</p>
+            <p><strong>Unlimited projects — free.</strong></p>
+          </div>
+
+          <div id="project-editor" class="project-editor hidden">
+            <div class="editor-top">
+              <input id="project-title" class="input" placeholder="Project title" />
+              <div class="editor-actions">
+                <button class="btn ghost" id="btn-preview">Preview</button>
+                <button class="btn primary" id="btn-publish">Publish</button>
+                <button class="btn ghost" id="btn-back">Back to projects</button>
+              </div>
             </div>
-        </div>
-    </section>
 
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <h2 class="section-title">Cene</h2>
-            <p class="section-sub">Planovi za pojedince i timove.</p>
+            <div class="editor-main">
+              <div class="editor-left">
+                <h4>Components</h4>
+                <div class="component" data-type="header">Header (coming soon)</div>
+                <div class="component" data-type="text">Text</div>
+                <div class="component" data-type="button">Button</div>
+                <div class="component" data-type="image">Image (coming soon)</div>
+                <div class="muted small">Drag & drop is simulated — click to add.</div>
+              </div>
 
-            <div class="pricing-grid">
-                <div class="price-card">
-                    <div class="price-title">Free</div>
-                    <div class="price-value">€0</div>
-                    <ul class="price-list">
-                        <li>Do 1 projekat</li>
-                        <li>Osnovne komponente</li>
-                        <li>Publikovanje</li>
-                    </ul>
-                    <button class="btn ghost">Start free</button>
-                </div>
+              <div class="editor-canvas" id="editor-canvas">
+                <!-- Composition -->
+              </div>
 
-                <div class="price-card recommended">
-                    <div class="ribbon">Popular</div>
-                    <div class="price-title">Pro</div>
-                    <div class="price-value">€15 / mo</div>
-                    <ul class="price-list">
-                        <li>Neograničeni projekti</li>
-                        <li>Napredne komponente</li>
-                        <li>Team members</li>
-                    </ul>
-                    <button class="btn primary">Get Pro</button>
-                </div>
-
-                <div class="price-card">
-                    <div class="price-title">Enterprise</div>
-                    <div class="price-value">Custom</div>
-                    <ul class="price-list">
-                        <li>Dedicated support</li>
-                        <li>Custom integrations</li>
-                        <li>SLA</li>
-                    </ul>
-                    <button class="btn ghost">Contact sales</button>
-                </div>
+              <div class="editor-right">
+                <h4>Settings</h4>
+                <div class="muted small">Click an element in canvas to edit its text.</div>
+                <div id="inspector"></div>
+              </div>
             </div>
-        </div>
+          </div>
+
+        </main>
+      </div>
     </section>
 
-    <section id="docs" class="docs">
-        <div class="container">
-            <h2 class="section-title">Docs & Resources</h2>
-            <div class="doc-grid">
-                <article class="doc-card">
-                    <h4>Getting started</h4>
-                    <p>Brz vodič kako napraviti prvu aplikaciju.</p>
-                </article>
-
-                <article class="doc-card">
-                    <h4>API reference</h4>
-                    <p>Dokumentacija za sve dostupne API pozive.</p>
-                </article>
-
-                <article class="doc-card">
-                    <h4>Community</h4>
-                    <p>Forum, tutorials i predlošci od zajednice.</p>
-                </article>
-            </div>
+    <!-- Public preview page (when ?share=ID in URL) -->
+    <section id="public-preview" class="hidden">
+      <div class="container">
+        <div class="preview-top">
+          <button class="btn ghost" id="preview-back">← Back</button>
+          <h2 id="preview-title">Preview</h2>
         </div>
+
+        <div class="preview-frames">
+          <div class="frame phone" id="frame-phone"></div>
+          <div class="frame tablet" id="frame-tablet"></div>
+          <div class="frame desktop" id="frame-desktop"></div>
+        </div>
+
+        <div class="muted small">This is a public preview generated by NoCode Builder demo.</div>
+      </div>
     </section>
 
-    <section id="contact" class="footer-cta">
-        <div class="container">
-            <h3>Spreman da počneš?</h3>
-            <p>Napravite svoj prvi projekt danas — besplatno.</p>
-            <button class="btn big primary">Start free</button>
-        </div>
-    </section>
-</main>
+  </main>
 
-<footer class="site-footer">
-    <div class="container footer-inner">
-        <div class="col">
-            <a class="brand" href="#">Builderly</a>
-            <p>Tools to build apps visually.</p>
-        </div>
+  <!-- Login / Signup Modal -->
+  <div class="modal hidden" id="auth-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="auth-close">✕</button>
+      <h3 id="auth-title">Log in</h3>
 
-        <div class="col">
-            <h5>Product</h5>
-            <a href="#features">Features</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#docs">Docs</a>
+      <form id="auth-form">
+        <label>Email</label>
+        <input type="email" id="auth-email" class="input" required />
+        <label>Password</label>
+        <input type="password" id="auth-password" class="input" required />
+        <div class="auth-actions">
+          <button class="btn primary" id="auth-submit" type="submit">Log in</button>
+          <button class="btn ghost" id="switch-to-signup" type="button">Switch to Sign up</button>
         </div>
-
-        <div class="col">
-            <h5>Company</h5>
-            <a href="#contact">Contact</a>
-            <a href="#">Careers</a>
-        </div>
-
-        <div class="col">
-            <h5>Follow</h5>
-            <div class="socials">Twitter · GitHub · Discord</div>
-        </div>
+        <div class="muted small">Admin credentials: <code>nocodebuilder@hotmail.com / Nikolapro1!</code></div>
+      </form>
     </div>
-    <div class="copyright">© <span id="year"></span> Builderly. All rights reserved.</div>
-</footer>
+  </div>
 
-<script src="script.js"></script>
+  <template id="project-item-tpl">
+    <div class="project-item">
+      <div class="title"></div>
+      <div class="meta">
+        <button class="btn tiny open">Open</button>
+        <button class="btn tiny edit">Rename</button>
+        <button class="btn tiny publish">Publish</button>
+        <button class="btn tiny del">Delete</button>
+      </div>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
 </body>
 </html>
